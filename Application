@@ -1,0 +1,41 @@
+import java.io.*;
+
+/**
+ * This creates a new Dictionary Object, loads it with data, prints its contents,
+ * and then searches for 5 entries that exist and 1 entry that doesn't exist. This 
+ * class could be used as a technical manual where users could get a general print-
+ * out or look up specific terms quickly.  
+ */
+public class Application {
+
+    public static void main(String[] args) throws FileNotFoundException {
+        
+    	/**
+    	 * Task: Creates a new dictionary Object and populates it contents.
+    	 * Then, it prints out the words and definitions.
+    	 */
+        Dictionary dictionary = new Dictionary();
+        dictionary.loadData();
+       System.out.println("*************************\r   Printing Contents \r*************************"
+       		+ "\r");
+        dictionary.printDictionary();
+        
+        /**
+         * Task: Prints out the word, meaning, and hashKey for 5 elements.
+         */
+        
+        System.out.println("\rLoading Contents:\r");
+        System.out.println(dictionary.searchDictionary("sea smoke"));
+        System.out.println(dictionary.searchDictionary("love apple"));
+        System.out.println(dictionary.searchDictionary("'tis"));
+        System.out.println(dictionary.searchDictionary("jakes"));
+        System.out.println(dictionary.searchDictionary("lief"));
+        
+        /**
+         * Task: searches for a word that doens't exist and handles it appropriately. 
+         */
+        System.out.println("Invalid Entry Example:");
+        System.out.println(dictionary.searchDictionary("supercalifragilisticexpialidocious"));
+    }//end main
+
+}//end class
