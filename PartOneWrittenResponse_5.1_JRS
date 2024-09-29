@@ -1,0 +1,20 @@
+John Stangel
+CS-215-ON 
+Professor Darrell Keeling  
+
+Part 1 
+
+a.  Hash functions use a key to create a hash value that connects the key to its value in a data
+structure, called a hash table. These values can be stored as arrays. The search key is 
+mapped/hashed to the index. 
+ 
+b. An example would be to connect the name (String) of a person with their respective salaries. If 
+Zara has a salary of 86000 dollars, we could use a hash value of 4 as Zara (the key) has 4-letters. 
+At Index 4, we could save the value 86000. This is a simple example and doesn’t consider collisions.
+Often, you will need to use a mod operator %: code % n where n is the size of the hash table.  
+
+c. The main benefit of using a hash function is that it has a lower Big-Oh time complexity, which 
+means it can be run faster and use less processing power than simply searching for a key. Although 
+it may be more work up front, it pays off with larger data sets.  
+
+d. Java Util HashMap uses HashMap<String, String>(); when hashing String Objects.  
